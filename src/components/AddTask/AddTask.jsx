@@ -12,16 +12,17 @@ const handleinput = (e)=>{
   });
 }
   const handleSubmit = ()=>{
-    handleAddTodo(todos);
+    // handleAddTodo(todos);
+
 
   }
 
   return (
     <div className={styles.todoForm}>
 
-      <input data-testid="add-task-input" type="text" value={todos} onChange={handleinput} />
+      <input data-testid="add-task-input" type="text" value={todos} onChange={handleinput} placeholder="Enter todo" />
 
-      <button data-testid="add-task-button"  onSubmit={handleSubmit}></button>
+      <button data-testid="add-task-button"  onSubmit={handleSubmit}>Add todo</button>
     </div>
   );
 };

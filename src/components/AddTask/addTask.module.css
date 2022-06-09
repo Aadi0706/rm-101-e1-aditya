@@ -1,4 +1,16 @@
-styles.todoForm{
-  display:flex;
-  justify-content:center;
+.todoForm{
+ margin-left: 400px;
+ 
+}
+
+.todoForm >input{
+  width: 180px;
+  height: 30px;
+}
+
+.todoForm >button{
+  width:80px;
+  height:30px;
+  margin-top: 60px;
+  margin: 10px;
 }
