@@ -1,3 +1,4 @@
-.addTask {
-  /* Sample */
+styles.todoForm{
+  display:flex;
+  justify-content:center;
 }
