@@ -2,27 +2,21 @@ import React from "react";
 import styles from "./addTask.module.css";
 import { useState } from "react";
 
- const AddTask = (handleAddTodo) => {
+
+ const AddTask = ({getData}) => {
   // NOTE: do not delete `data-testid` key value pair.
 const [todos,setTodos] =useState("");
 
-const handleinput = (e)=>{
-  setTodos({...todos,
-    text:e.target.value
-  });
-}
-  const handleSubmit = ()=>{
-    // handleAddTodo(todos);
 
-
-  }
+ 
 
   return (
     <div className={styles.todoForm}>
 
-      <input data-testid="add-task-input" type="text" value={todos} onChange={handleinput} placeholder="Enter todo" />
+      <input data-testid="add-task-input" type="text" value={todos} onChange={(e)=>{setTodos(e.target.value)}} placeholder="Enter todo" />
 
-      <button data-testid="add-task-button"  onSubmit={handleSubmit}>Add todo</button>
+      <button data-testid="add-task-button"  onClick={()=>{getData(todos)}}>Add todo</button>
+
     </div>
   );
 };
